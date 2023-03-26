@@ -1,0 +1,1 @@
+    head=delbegin(head);
