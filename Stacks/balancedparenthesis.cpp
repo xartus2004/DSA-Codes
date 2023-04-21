@@ -7,28 +7,26 @@ bool balanced(string str)
     for(int i=0 ; i<str.length() ; i++)
     {
         if(i=='('|| i=='{' || i=='[')
-        {
             stk.push(i);
-        }
+
         else if( (i==')' && stk.top()=='(') ||
                  (i=='}' && stk.top()=='{')||
                  (i==']' && stk.top()=='['))
         {
             stk.pop();            
         }
-        else
-            stk.push(i);
     }
-    if(stk.empty())
-        return true;
-    else
-        return false;
+    return stk.empty();
 }
 
 int main()
 {
     string str;
+    cout<<"Enter a string with paranthesis: ";
     cin>>str;
     bool t=balanced(str);
-    cout<<t; 
+    if(t)
+        cout<<"The paranthesis is balanced";
+    else
+        cout<<"The paranthesis is not balanced";
 }   
