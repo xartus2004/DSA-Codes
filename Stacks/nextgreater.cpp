@@ -32,7 +32,6 @@ int main()
 
     for(int i=0 ; i<n ; i++)
         arr[i]=nextgreater(stk,arr1[i]);
-
     for(auto i:arr)
-        cout<<i;
+        cout<<i<<" ";
 }
