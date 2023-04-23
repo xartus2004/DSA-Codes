@@ -1,3 +1,7 @@
+//Paranjay Dubey
+//2022BCS-051
+//Balanced Paranthesis
+
 #include <iostream>
 #include <stack>
 using namespace std;
@@ -20,6 +24,10 @@ int main()
     stack<int>stk;
     cout<<"Enter length of stack";
     cin>>n;
+
+    // arr1 stores the elements being pushed into the stack
+    // arr stores the maximum element above them
+
     int arr[n],arr1[n];
 
     for(int i=0 ; i<n ; i++)
@@ -32,6 +40,7 @@ int main()
 
     for(int i=0 ; i<n ; i++)
         arr[i]=nextgreater(stk,arr1[i]);
+
     for(auto i:arr)
         cout<<i<<" ";
 }
