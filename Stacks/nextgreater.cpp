@@ -1,46 +1,44 @@
 //Paranjay Dubey
 //2022BCS-051
-//Balanced Paranthesis
 
+//next greater element using stack 
 #include <iostream>
 #include <stack>
 using namespace std;
-int nextgreater(stack <int> stk,int x)
-{
-    int max=stk.top();
-    while(stk.top()!=x)
-    {
-        if (stk.top()>max)
-            max=stk.top();
-        stk.pop();          
-    }
-
-    return max;
-}
-
 int main()
 {
-    int n,x;
-    stack<int>stk;
-    cout<<"Enter length of stack";
-    cin>>n;
-
-    // arr1 stores the elements being pushed into the stack
-    // arr stores the maximum element above them
-
-    int arr[n],arr1[n];
-
-    for(int i=0 ; i<n ; i++)
+    int arr[]={1,2,3,4,5};
+    int brr[5];
+    stack<int> myst;
+    for (int i = 4; i >=0; i--)
     {
-        cout<<"Enter an element: ";
-        cin>>x;
-        stk.push(x);
-        arr1[i]=x;
+        if (i==4)
+        {
+          brr[i]=-1  ;
+          myst.push(arr[i]);
+        }
+        else
+        {
+            while (!myst.empty() && arr[i]>=myst.top())
+            {
+               myst.pop();
+            }
+            if (myst.empty())
+            {
+                brr[i]=-1;
+                myst.push(arr[i]);
+            }
+            else
+            {
+                brr[i]=myst.top();
+                myst.push(arr[i]);
+            }  
+        }
     }
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<brr[i]<<endl;
+    }
+    return 0;
 
-    for(int i=0 ; i<n ; i++)
-        arr[i]=nextgreater(stk,arr1[i]);
-
-    for(auto i:arr)
-        cout<<i<<" ";
 }

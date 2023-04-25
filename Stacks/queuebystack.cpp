@@ -1,6 +1,5 @@
 //Paranjay Dubey
 //2022BCS-051
-//Balanced Paranthesis
 
 //Implementation of queue using stack
 
