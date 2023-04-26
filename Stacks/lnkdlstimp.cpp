@@ -26,5 +26,4 @@ struct MyStack
         head=temp;
         sz++;
     }
-    
-}
+};

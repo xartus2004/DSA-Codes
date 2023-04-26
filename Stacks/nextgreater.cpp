@@ -5,40 +5,41 @@
 #include <iostream>
 #include <stack>
 using namespace std;
+
+void nextgreater(int arr[],int n)
+{
+    int nql[n];
+    stack<int>stk;
+    for(int i=2*n-1 ; i>=0 ; i--)
+    {
+        while(!(stk.empty()) && arr[i%n]>=stk.top())
+        {
+            stk.pop();
+        }
+        if(i<n)
+        {
+            if(stk.empty()==false)
+                nql[i]=stk.top();
+            else
+                nql[i]=-1;
+        }
+        stk.push(arr[i%n]);
+    }
+    cout<<"The next greater elements are"<<endl;
+    for(auto i:nql)
+        cout<<i<<" ";
+}
+
 int main()
 {
-    int arr[]={1,2,3,4,5};
-    int brr[5];
-    stack<int> myst;
-    for (int i = 4; i >=0; i--)
+    int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
+    int arr[n];
+    for(int i=0 ; i<n ; i++)
     {
-        if (i==4)
-        {
-          brr[i]=-1  ;
-          myst.push(arr[i]);
-        }
-        else
-        {
-            while (!myst.empty() && arr[i]>=myst.top())
-            {
-               myst.pop();
-            }
-            if (myst.empty())
-            {
-                brr[i]=-1;
-                myst.push(arr[i]);
-            }
-            else
-            {
-                brr[i]=myst.top();
-                myst.push(arr[i]);
-            }  
-        }
+        cout<<"Enter "<<i<<"th element: ";
+        cin>>arr[i];
     }
-    for (int i = 0; i < 5; i++)
-    {
-        cout<<brr[i]<<endl;
-    }
-    return 0;
-
+    nextgreater(arr,n);
 }

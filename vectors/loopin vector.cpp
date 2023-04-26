@@ -11,7 +11,7 @@ int main()
         int element;
         cin>>element;
         v.push_back(element);
-
+        
         //cin>>v[i];
     }
 
