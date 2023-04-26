@@ -55,7 +55,8 @@ return s.top();
 
 // Driver Code
 int main() {
-string pre_exp = "*-A/BC-/AKL";
+string pre_exp;
+cin>>pre_exp;
 cout << "Infix : " << preToInfix(pre_exp);
 return 0;
 }

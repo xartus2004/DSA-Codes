@@ -118,7 +118,8 @@ string infixToPrefix(string infix)
 // Driver code
 int main()
 {
-	string s = ("x+y*z/w+u");
+	string s;
+    cin>>s;
 
 	// Function call
 	cout << infixToPrefix(s) << std::endl;
