@@ -57,3 +57,8 @@ void printCodes(Node* root,string str)
     printCodes(root->left,str+"0");
     printCodes(root->right,str+"1");
 }
+
+int main()
+{
+    
+}

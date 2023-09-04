@@ -12,11 +12,10 @@ void countingSort(int arr[],int n)
     }
 
     for(int i=1 ; i<10 ; i++)
-    {
         count[i]+=count[i-1];
-    }
 
     int k=0;
+    
     for(int i=0 ; i<10 ; i++)
     {
         for(int j=k ; j<count[i] ; j++)

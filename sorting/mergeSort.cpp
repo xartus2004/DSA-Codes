@@ -8,21 +8,17 @@ using namespace std;
 
 void merge(int arr[], int l, int m, int r)
 {
-	int k;
+	int k;  //size of array
 	int n1 = m - l + 1;
 	int n2 = r - m;
 
-	// Create temp arrays
 	int L[n1], R[n2];
 
-	// Copy data to temp arrays L[] and R[]
 	for(int i = 0; i < n1; i++)
 		L[i] = arr[l + i];
 	for(int j = 0; j < n2; j++)
 		R[j] = arr[m + 1+ j];
 
-	// Merge the temp arrays
-	// back into arr[l..r]
 	int i = 0;
 	int j = 0;
 	k = l;
@@ -95,5 +91,3 @@ int main()
 	printArray(arr, arr_size);
 	return 0;
 }
-
-// This code is contributed by Mayank Tyagi
