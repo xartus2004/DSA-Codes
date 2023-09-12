@@ -1,0 +1,37 @@
+Complete/Perfect Binary Tree : All levels are comppletely filled
+Almost Complete Binary Tree : 
+    Perfect BT w/o the last levels and the last level filled from left to right
+    Leaves should be present only on last and 2nd last level
+
+HEAP DATA STRUCTURE
+1. Complete Tree
+** We can have n ary Heaps as well in case of n ary Tree **
+2. Heap Property
+    Parent is bigger/smaller than its childs for MAX/MIN Heap respectively
+
+Binomial Heap
+Fibonacci Heap
+Leftist Heap
+
+
+For Binary Tree
+1. Children
+    Parent -> i
+    1st Child -> 2i+1
+    2nd Child -> 2i+2
+2.  Parent
+    Child -> i
+    Parent -> lower  [i/2]
+
+
+Facts
+1. Height of Tree -> h
+
+    No of nodes at height h -> 2^h
+    Total No. of Nodes -> 2^(h+1) -1
+
+2. No of Internal Nodes = No of leaves - 1
+
+3. Height of Tree -> lower [log 2 N]        for binary Tree
+
+

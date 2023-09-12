@@ -1,5 +1,7 @@
 //Its a Greedy Algorithm
-//
+//It is a Greedy Algo
+//It may or may not give correct answer for Negative edges
+
 
 #include <bits/stdc++.h> 
 using namespace std; 
@@ -8,9 +10,9 @@ using namespace std;
 vector<int> djikstraAlgo(int graph[V][V],int src) 
 { 
 
-	vector<int> dist(V,INT_MAX);
+	vector <int> dist(V,INT_MAX);
 	dist[src]=0;
-	vector<bool> finalised(V,false);
+	vector <bool> finalised(V,false);
 
 	for (int count = 0; count < V-1 ; count++) 
 	{ 
@@ -28,10 +30,10 @@ vector<int> djikstraAlgo(int graph[V][V],int src)
 
 int main() 
 { 
-	int graph[V][V] = { { 0, 50, 100, 0}, 
-						{ 50, 0, 30, 200 }, 
-						{ 100, 30, 0, 20 }, 
-						{ 0, 200, 20, 0 },}; 
+	int graph[V][V] = { { 0, 50, 100, 0},
+						{ 50, 0, 30, 200 },
+						{ 100, 30, 0, 20 },
+						{ 0, 200, 20, 0 },};
 	for(int x: djikstraAlgo(graph,0))
 	    cout<<x<<" ";
 	return 0; 
