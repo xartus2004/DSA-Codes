@@ -22,3 +22,10 @@ void DFS(vector<int> adj[],int s,int v)
     bool visited[v+1]={0,};
     DFSRec(adj,s,visited);
 }
+
+int main()
+{   
+    int v=6;
+    vector<int> arr[]={{2,3,4},{2,3},{0,1},{0,1,4},{0,3,5},{4}};
+    DFS(arr,0,v);
+}

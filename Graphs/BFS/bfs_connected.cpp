@@ -14,15 +14,18 @@ void BFS(vector <int> adj[],int v,int s)
         cout<<u<<"\t";
         for(int v:adj[u])
         {
-            if(visited[u]==false)
+            if(visited[v]==false)
             {
                 visited[v]=true;
-                q.push(u);
+                q.push(v);
             }
         }
     }
 }
 
-int main(){
-
+int main()
+{   
+    int v=6;
+    vector<int> arr[]={{2,3,4},{2,3},{0,1},{0,1,4},{0,3,5},{4}};
+    BFS(arr,v,0);
 }
