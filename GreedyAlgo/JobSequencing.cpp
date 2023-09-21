@@ -19,8 +19,7 @@ struct jobProfit {
 void printJobScheduling(Job arr[], int n)
 {
 	vector<Job> result;
-	sort(arr, arr + n,
-		[](Job a, Job b) { return a.dead < b.dead; });
+	sort(arr, arr + n,[](Job a, Job b) { return a.dead < b.dead; });
 
 	priority_queue<Job, vector<Job>, jobProfit> pq;
 

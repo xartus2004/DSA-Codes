@@ -18,7 +18,7 @@ int f(int arr[],int low,int high)
     int j=high;
     while(i<j)
     {
-        //We have i<=high-1 and j>=low-1 so that at the extreme ends when either i=high or j=low therir value don't go out of bound
+        //We have i<=high-1 and j>=low-1 so that at the extreme ends when either i=high or j=low their value don't go out of bound
 
 
         while(arr[i]<=arr[pivot] && i<=high-1)        //Here we have <= because we consider that if there are two equal element the other one will be on the left of the pivotal one

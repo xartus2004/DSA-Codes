@@ -3,7 +3,7 @@
 using namespace std;
 
 
-// Function to merge the two haves
+// Function to merge the two halves
 // arr[l..m] and arr[m+1..r] of array arr[]
 
 void merge(int arr[], int l, int m, int r)

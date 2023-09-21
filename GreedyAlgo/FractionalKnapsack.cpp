@@ -28,7 +28,7 @@ double fractionalKnapsack(int W,struct Item arr[],int N)
         if(W>arr[i].weight)
         {
             W-=arr[i].weight;
-            totalProfit+=arr[i].weight*arr[i].profit;
+            totalProfit+=arr[i].profit;
         }
         else
         {

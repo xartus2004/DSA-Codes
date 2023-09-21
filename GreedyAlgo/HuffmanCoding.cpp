@@ -1,4 +1,4 @@
-//Used for loassless compression
+//Used for lossless compression
 //Variable Length Coding
 //Greedy Idea: Most Frequent character has smallest code
 //Condition for Decompression: No code should be prefix of another code

@@ -24,8 +24,7 @@ void countingSort(int arr[],int n)
             k++;
         }
     }
-    cout<<endl;
-    
+    cout<<endl; 
 }
 
 int main()
