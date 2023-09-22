@@ -20,10 +20,10 @@ vector<int> djikstraAlgo(int graph[V][V],int src)
 		for(int i=0;i<V;i++)
 		    if(!finalised[i] && (u==-1||dist[i]<dist[u]))
 		        u=i;
-		finalised[u] = true; 
+		finalised[u] = true;
 		for (int v = 0; v < V; v++)
-			if (graph[u][v]!=0 && finalised[v] == false) 
-				dist[v] = min(dist[v],dist[u]+graph[u][v]); 
+			if (graph[u][v]!=0 && finalised[v] == false && (dist[u]+graph[u][v]) < dist[v]) 
+				dist[v] = dist[u]+graph[u][v]; 
 	}
     return dist;
 }

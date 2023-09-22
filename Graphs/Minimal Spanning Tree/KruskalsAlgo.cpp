@@ -47,9 +47,9 @@ public:
             for (auto it : adj[i]) {
                 int adjNode = it[0];
                 int wt = it[1];
-                int node = i;
+                // int node = i;
 
-                edges.push_back({wt, {node, adjNode}});
+                edges.push_back({wt, {i, adjNode}});
             }
         }
         DisjointSet ds(V);

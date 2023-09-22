@@ -1,4 +1,3 @@
-package oops;
 import java.util.Scanner;
 public class Main2 {
 	public static void main(String[] args) {
@@ -13,18 +12,13 @@ public class Main2 {
 		for(int i=3;i<n;i++)
 		{
 			if(i%2==0)
-			{   
 				series[i]=series[i-1]+series[i-2];
-			}
-			else {
+			else
 				series[i]=series[i-1]+series[i-2]+series[i-3];
-			}
-			
 		}
+		
 		for(int i=0;i<n;i++)
-		{
 			System.out.print(series[i]+" ");
-		}
 		in.close();
 	}
 }

@@ -1,5 +1,3 @@
-package oops;
-
 class Employee {
     private int id;
     private String name;
@@ -52,7 +50,8 @@ class EmployeeDatabase {
         size = 0;
     }
 
-    public void addEmployee(int id, String name, int salary) {
+    public void addEmployee(int id, String name, int salary)
+    {
         if (size < employees.length) {
             employees[size] = new Employee(id, name, salary);
             size++;
@@ -64,7 +63,7 @@ class EmployeeDatabase {
     public void printEmployee(int id) {
         for (int i = 0; i < size; i++) {
             if (employees[i].getId() == id) {
-                System.out.println(employees[i]);
+                System.out.print(employees[i]);
                 return;
             }
         }

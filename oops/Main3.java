@@ -1,13 +1,10 @@
-package oops;
 import java.util.Scanner;
 
 public class Main3 {
 
 	public static void reverseArray(int [] a,int beg,int end) {
 		if(beg>=end)
-		{
-		return;
-	    }
+		    return;
 		
 		int temp=a[beg];
 		a[beg]=a[end];

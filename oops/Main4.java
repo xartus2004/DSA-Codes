@@ -1,5 +1,3 @@
-package oops;
-
 import java.util.Scanner;
 
 public class Main4 {
@@ -38,10 +36,9 @@ public class Main4 {
 		{
 			if(targ>a[j])
 			{
-			floor=a[j];
-			k=0;
+				floor=a[j--];
+				k=0;
 			}
-			j--;
 		}
 		if(k==1)
 		{

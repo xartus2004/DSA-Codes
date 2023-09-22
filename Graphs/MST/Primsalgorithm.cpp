@@ -55,7 +55,7 @@ void primMST(int graph[V][V])
             }
         }
     }
-     printMST(parent, graph);
+    printMST(parent, graph);
 }
 
 int main()
