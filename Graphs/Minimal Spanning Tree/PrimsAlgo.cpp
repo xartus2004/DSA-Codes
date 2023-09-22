@@ -3,7 +3,8 @@ using namespace std;
 #define V 4
 
 void printMST(int parent[], int graph[V][V])
-{ int minCost=0;
+{ 
+	int minCost=0;
     for (int i = 1; i < V; i++)
     {
         cout << parent[i] << " - " << i << "\t"<<"-> "<< graph[i][parent[i]] << " \n";
@@ -39,7 +40,7 @@ int primsAlgo(int graph[V][V])
 	}
 	printMST(parent, graph);
 	return res;
-} 
+}
 
 int main() 
 { 

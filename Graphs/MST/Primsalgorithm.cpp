@@ -24,8 +24,11 @@ void printMST(int parent[], int graph[V][V])
 { int minCost=0;
     for (int i = 1; i < V; i++)
     {
-        cout << parent[i] << " - " << i << "\t"<<"-> "<< graph[i][parent[i]] << " \n";
-        minCost+=graph[i][parent[i]];
+        if(graph[i][parent[i]]!=0)
+        {
+            cout << parent[i] << " - " << i << "\t"<<"-> "<< graph[i][parent[i]] << " \n";
+            minCost+=graph[i][parent[i]];
+        }
     }
     cout<<"The cost of MST: "<<minCost;
         
@@ -55,7 +58,7 @@ void primMST(int graph[V][V])
             }
         }
     }
-    printMST(parent, graph);
+     printMST(parent, graph);
 }
 
 int main()

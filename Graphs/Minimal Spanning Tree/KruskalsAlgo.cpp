@@ -47,8 +47,6 @@ public:
             for (auto it : adj[i]) {
                 int adjNode = it[0];
                 int wt = it[1];
-                // int node = i;
-
                 edges.push_back({wt, {i, adjNode}});
             }
         }
@@ -60,7 +58,8 @@ public:
             int u = it.second.first;
             int v = it.second.second;
 
-            if (ds.findUPar(u) != ds.findUPar(v)) {
+            if (ds.findUPar(u) != ds.findUPar(v))
+            {
                 mstWt += wt;
                 ds.unionByRank(u, v);
             }
