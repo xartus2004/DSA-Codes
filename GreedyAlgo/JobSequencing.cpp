@@ -23,19 +23,19 @@ void printJobScheduling(Job arr[], int n)
 
 	priority_queue<Job, vector<Job>, jobProfit> pq;
 
-	for (int i = n - 1; i >= 0; i--) {
+	for (int i = n - 1; i >= 0; i--) 
+	{
 		int slot_available;
 	
-		if (i == 0) {
+		if (i == 0)
 			slot_available = arr[i].dead;
-		}
-		else {
+		else
 			slot_available = arr[i].dead - arr[i - 1].dead;
-		}
 	
 		pq.push(arr[i]);
 	
-		while (slot_available > 0 && pq.size() > 0) {
+		while (slot_available > 0 && pq.size() > 0) 
+		{
 			Job job = pq.top();
 			pq.pop();
 		

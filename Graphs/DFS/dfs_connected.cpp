@@ -12,8 +12,6 @@ void DFSRec(vector<int> adj[] , int s , bool visited[])
         if(visited[u]==false)
             DFSRec(adj,u,visited);
     }
-
-
 }
 
 void DFS(vector<int> adj[],int s,int v)

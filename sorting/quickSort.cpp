@@ -20,7 +20,6 @@ int f(int arr[],int low,int high)
     {
         //We have i<=high-1 and j>=low-1 so that at the extreme ends when either i=high or j=low their value don't go out of bound
 
-
         while(arr[i]<=arr[pivot] && i<=high-1)        //Here we have <= because we consider that if there are two equal element the other one will be on the left of the pivotal one
             i++;
         while(arr[j]>arr[pivot] && j>=low+1)          //Here we have > because we consider that if there are two equal element the other one will be on the left of the pivotal one
@@ -32,20 +31,20 @@ int f(int arr[],int low,int high)
     return j;
 }
 
-void qs(int arr[],int low,int high)
+void QuickSort(int arr[],int low,int high)
 {
     if(low<high)
     {
         int pIndex=f(arr,low,high);     //Partition Index
-        qs(arr,low,pIndex-1);
-        qs(arr,pIndex+1,high);
+        QuickSort(arr,low,pIndex-1);
+        QuickSort(arr,pIndex+1,high);
     }
 }
 
 int main()
 {
     int arr[8]={4,6,2,5,7,9,1,3};
-    qs(arr,0,7);
+    QuickSort(arr,0,7);
     for(auto i:arr)
         cout<<i<<"\t";
 }
