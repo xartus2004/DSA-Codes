@@ -10,16 +10,11 @@ public class Main1 {
 		for(int i=0;i<n.length();i++)
 		{
 			if(i%2==0)
-			{
 				sum2=sum2+(int)n.charAt(i);
-			}
-			else {
-				sum1=sum1+(int)n.charAt(i);
-			}
-			
+			else
+				sum1=sum1+(int)n.charAt(i);			
 		}
 		System.out.println("Result:" + (sum2-sum1));
-
         in.close();
   }
 }

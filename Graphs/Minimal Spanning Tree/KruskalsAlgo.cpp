@@ -43,6 +43,7 @@ public:
     int spanningTree(int V, vector<vector<int>> adj[])
     {
         vector<pair<int, pair<int, int>>> edges;
+        vector<pair<int, pair<int, int>>> mstedges;
         for (int i = 0; i < V; i++) {
             for (auto it : adj[i]) {
                 int adjNode = it[0];
@@ -63,9 +64,13 @@ public:
             if (ds.findUPar(u) != ds.findUPar(v)) {
                 mstWt += wt;
                 ds.unionByRank(u, v);
+                mstedges.push_back({wt,{u,v}});
             }
         }
-
+        for(auto i:mstedges)
+        {
+            cout<<i.second.first<<" - "<<i.second.second<<" -> "<<i.first<<endl;
+        }
         return mstWt;
     }
 };
