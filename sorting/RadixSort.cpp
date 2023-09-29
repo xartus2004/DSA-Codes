@@ -43,5 +43,18 @@ void radixSort(int arr[],int n)
 
 int main()
 {
-    
+    int a[] = {210, 378, 563, 765, 92, 33, 0, 6};
+    int n=8;
+
+    cout << "Initial: ";
+    for (int i=0;i<n;i++)
+        cout <<a[i]<< " ";
+
+    radixSort(a,n);
+
+    cout << "\nFinal: ";
+    for (int i=0;i<n;i++)
+        cout <<a[i]<<" ";
+
+    return 0;
 }
