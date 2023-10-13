@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int getMax(int arr[],int n)
 {
     int res=arr[0];
@@ -25,7 +24,7 @@ void countingSort(int arr[],int n,int div)
     
     for(int i=n-1 ; i>=0 ; i--)
     {
-        output[count[(arr[i]/div)%10]-1]=arr[i];
+        output[count[(arr[i]/div)%10]-13]=arr[i];
         count[(arr[i]/div)%10]--;
     }
 
