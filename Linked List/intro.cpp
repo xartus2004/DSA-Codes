@@ -35,13 +35,13 @@ void printList(Node *head) // This head is different from the head given as argu
 
 // Recursive Traversal
 
-int *rprintlst(Node *head)
-{
-   if (head == NULL)
-      return; // Return NULL
-   cout << head->data << " ";
-   rprintlst(head->next);
-}
+// int *rprintlst(Node *head)
+// {
+//    if (head == NULL)
+//       return; // Return NULL
+//    cout << head->data << " ";
+//    rprintlst(head->next);
+// }
 
 // Insertion at beginning
 
@@ -155,6 +155,24 @@ int search(Node *head, int x)
    }
 }
 
+Node* reverseLL(Node *head)
+{
+      Node* prev = NULL;
+      Node* current = head;
+      Node* next;
+       
+      while(current)
+      {
+         next = current->next;
+         current->next = prev;   
+         prev = current;
+         current = next;
+      }
+
+      head = prev; //step 3
+      return head;
+}
+
 int main()
 {
    // Node* head=new Node(10);
@@ -170,12 +188,17 @@ int main()
    head->next->next = new Node(30);
    head->next->next->next = new Node(40);
    printList(head);
+   cout<<endl;
 
    // Insertion
 
-   head = insbegin(head, 30);
-   head = insbegin(head, 20);
-   head = insbegin(head, 10);
+   head=reverseLL(head);
+
+   // head = insbegin(head, 30);
+   // head = insbegin(head, 20);
+   // head = insbegin(head, 10);
+
+   printList(head);
 
    // It is stores in reverse
    // e.g. The above lines create the linked list   10 -> 20 -> 30
