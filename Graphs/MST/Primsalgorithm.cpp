@@ -21,17 +21,20 @@ int minKey(int key[], bool mstSet[])
 }
  
 void printMST(int parent[], int graph[V][V])
-{ int minCost=0;
+{
+    int minCost = 0;
+
+    cout << "Edges of Minimum Spanning Tree:\n";
     for (int i = 1; i < V; i++)
     {
-        if(graph[i][parent[i]]!=0)
+        // Check if the vertex has a valid parent
+        if (parent[i] != -1)
         {
-            cout << parent[i] << " - " << i << "\t"<<"-> "<< graph[i][parent[i]] << " \n";
-            minCost+=graph[i][parent[i]];
+            cout << parent[i] << " - " << i << "\t" << "-> " << graph[i][parent[i]] << " \n";
+            minCost += graph[i][parent[i]];
         }
     }
-    cout<<"The cost of MST: "<<minCost;
-        
+    cout << "The cost of MST: " << minCost;
 }
  
 
@@ -58,7 +61,7 @@ void primMST(int graph[V][V])
             }
         }
     }
-     printMST(parent, graph);
+    printMST(parent, graph);
 }
 
 int main()

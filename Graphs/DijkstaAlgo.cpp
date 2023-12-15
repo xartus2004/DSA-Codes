@@ -22,6 +22,7 @@ vector<int> djikstraAlgo(int graph[V][V],int src)
 		        u=i;
 		finalised[u] = true;
 		for (int v = 0; v < V; v++)
+			//Relaxation
 			if (graph[u][v]!=0 && finalised[v] == false && (dist[u]+graph[u][v]) < dist[v]) 
 				dist[v] = dist[u]+graph[u][v]; 
 	}

@@ -14,8 +14,8 @@ void printMST(int parent[], int graph[V][V])
 
 int primsAlgo(int graph[V][V]) 
 {
-    int parent[V];
-	int key[V];
+    int parent[V];		//Parent of node 'i'
+	int key[V];			//key is the the weight of the edge which connects i with its parent
 	int res=0; 
 	fill(key,key+V,INT_MAX);
 	bool mSet[V]={false};
