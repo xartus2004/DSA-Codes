@@ -1,7 +1,7 @@
 //Its a Greedy Algorithm
 //It is a Greedy Algo
 //It may or may not give correct answer for Negative edges
-
+// O(n^2) because n vertices are to be relaxed and each vertex can be connected to at max n-1 vertices(complete graph)
 
 #include <bits/stdc++.h> 
 using namespace std; 

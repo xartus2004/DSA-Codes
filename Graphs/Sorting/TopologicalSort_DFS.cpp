@@ -9,7 +9,8 @@ void DFS(int node,bool visited[],stack<int> &stk,vector<int> adj[])
 {
     visited[node]=true;
     for(auto it:adj[node])
-        if(!visited[it]) DFS(it,visited,stk,adj);
+        if(!visited[it])
+            DFS(it,visited,stk,adj);
     stk.push(node);
 }
 
@@ -22,7 +23,8 @@ void TopologicalSort_DFS(vector <int> adj[],int V)
     cin>>start;
     DFS(start,visited,stk,adj);
     for(int i=0 ; i<V ; i++)
-        if(!visited[i] && i!=start) DFS(i,visited,stk,adj);
+        if(!visited[i] && i!=start) 
+            DFS(i,visited,stk,adj);
     
     while(!stk.empty())
     {

@@ -65,7 +65,7 @@ public:
         return node->isEnd();
     }
 
-    bool search(string prefix)
+    bool startsWith(string prefix)
     {
         Node* node = root;
         for(int i=0 ; i<prefix.size() ; i++)

@@ -1,0 +1,1 @@
+            // cout<<people[j]<<" ";

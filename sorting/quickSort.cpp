@@ -11,7 +11,7 @@ using namespace std;
         4.random element of the array
 */
 
-int f(int arr[],int low,int high)
+int f(vector<int> &arr,int low,int high)
 {
     int pivot=low;
     int i=low;
@@ -31,7 +31,7 @@ int f(int arr[],int low,int high)
     return j;
 }
 
-void QuickSort(int arr[],int low,int high)
+void QuickSort(vector<int> &arr,int low,int high)
 {
     if(low<high)
     {
@@ -43,8 +43,8 @@ void QuickSort(int arr[],int low,int high)
 
 int main()
 {
-    int arr[8]={4,6,2,5,7,9,1,3};
-    QuickSort(arr,0,7);
+    vector<int> arr={3,5,4,3};
+    QuickSort(arr,0,3);
     for(auto i:arr)
         cout<<i<<"\t";
 }

@@ -48,8 +48,6 @@ vector<int> TopologicalSort(vector <int> adj[],int V)
     // return topo;
 }
 
-
-
 int main()
 {
     int V, E;
@@ -67,17 +65,8 @@ int main()
         cin >> u >> v;
         adjacencyList[u].push_back(v);
     }
-
-
     vector<int> topo=TopologicalSort(adjacencyList,V);
-    // Print the adjacency list
-    // cout << "Adjacency List:" << endl;
-    // for(int i=0 ; i<V ; i++)
-    // {
-    //     for(auto it:adjacencyList[i])
-    //         cout<<it<<"\t";
-    //     cout<<endl;
-    // }
+    
     for(auto it:topo)
         cout<<it<<"\t";
 
