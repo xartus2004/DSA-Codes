@@ -79,6 +79,7 @@
 # Documentation
 /doc
 /docs
+/practice
 
 # Temp files
 *.bak
@@ -145,3 +146,4 @@
 # Misc
 .hgignore
 Thumbs.db
+.vscode
